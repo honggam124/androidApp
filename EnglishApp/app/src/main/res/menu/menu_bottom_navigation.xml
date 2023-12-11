@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/home"
+        android:icon="@drawable/icon_home" />
+
+    <item
+        android:id="@+id/menu_library"
+        android:title="@string/library"
+        android:icon="@drawable/icon_library" />
+
+    <item
+        android:id="@+id/menu_add"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_communication"
+        android:title="@string/communication"
+        android:icon="@drawable/icon_social" />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:title="@string/setting"
+        android:icon="@drawable/icon_setting" />
+</menu>

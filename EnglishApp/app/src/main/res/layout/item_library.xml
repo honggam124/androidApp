@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/imv_topic"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/img_library"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_tittleTopic"
+        android:layout_width="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_height="30dp"
+        android:text="@string/seasons"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/imv_topic"
+        app:layout_constraintTop_toBottomOf="@id/imv_topic"
+        />
+    <TextView
+        android:id="@+id/tv_process"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/_30_45_words"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_tittleTopic"
+        app:layout_constraintStart_toStartOf="@id/tv_tittleTopic"
+        />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/radius_10"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/completed"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_process"
+        app:layout_constraintEnd_toEndOf="@+id/imv_topic"
+        app:layout_constraintTop_toBottomOf="@+id/imv_topic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

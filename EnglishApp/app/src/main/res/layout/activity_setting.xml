@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_header_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_setting"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/radius_topright_topleft_30"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--ACCOUNT SETTING-->
+    <TextView
+        android:id="@+id/tv_accountSetting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/edit_logo_person"
+        android:drawableEnd="@drawable/edit_logo_arrow"
+        android:text="@string/account_setting"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_top">
+    </TextView>
+
+    <!--PASSWORD-->
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/edit_logo_lock"
+        android:drawableEnd="@drawable/edit_logo_arrow"
+        android:text="@string/prompt_password"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_accountSetting">
+    </TextView>
+
+    <!--NOTIFICATION-->
+    <TextView
+        android:id="@+id/tv_notification"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/edit_logo_nofitication"
+        android:text="NOFITICATION"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password">
+    </TextView>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/s_notification"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        app:thumbTint="@color/darkBlue"
+        app:trackTint="@color/backgroundBlue"
+        app:layout_constraintEnd_toEndOf="@id/tv_notification"
+        app:layout_constraintBottom_toBottomOf="@id/tv_notification"/>
+
+    <!--DARK MODE-->
+    <TextView
+        android:id="@+id/tv_darkMode"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:text="@string/dark_mode"
+        android:drawableStart="@drawable/edit_logo_darkmode"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_notification">
+    </TextView>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/s_darkMode"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        app:thumbTint="@color/darkBlue"
+        app:trackTint="@color/backgroundBlue"
+        app:layout_constraintEnd_toEndOf="@id/tv_darkMode"
+        app:layout_constraintBottom_toBottomOf="@id/tv_darkMode"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/done"
+        android:background="@drawable/border"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/darkBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

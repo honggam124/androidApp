@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBlue"
+    tools:context=".View.main.HomeFragment">
+
+    <include layout="@layout/header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_popularTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/popular_topics"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vf_popularTopics"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ViewFlipper
+            android:id="@+id/vf_popularTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_popularTopics">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_library" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_library" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_library" />
+        </ViewFlipper>
+
+        <TextView
+            android:id="@+id/tv_reviewWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/review_words"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_popularTopics"
+            app:layout_constraintTop_toBottomOf="@+id/vf_popularTopics" />
+
+        <FrameLayout
+            android:id="@+id/fl_reviewWords"
+            android:layout_width="350dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_10"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reviewWords" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iv_review_words"
+            app:layout_constraintBottom_toBottomOf="@+id/fl_reviewWords"
+            app:layout_constraintStart_toStartOf="@+id/fl_reviewWords"
+            app:layout_constraintTop_toTopOf="@+id/fl_reviewWords" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="130dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/you_ve_learned"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/fl_reviewWords"
+            app:layout_constraintTop_toTopOf="@+id/fl_reviewWords" />
+
+        <TextView
+            android:id="@+id/tv_numberWords"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/_360_words"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/fl_reviewWords" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="130dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/from_topics"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/fl_reviewWords"
+            app:layout_constraintEnd_toEndOf="@+id/fl_reviewWords" />
+
+        <TextView
+            android:id="@+id/tv_leaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="LEADERBOARD"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_reviewWords"
+            app:layout_constraintTop_toBottomOf="@+id/fl_reviewWords" />
+
+        <FrameLayout
+            android:id="@+id/fl_leaderBoard"
+            android:layout_width="350dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_10"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_leaderBoard" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iv_leader_board"
+            app:layout_constraintBottom_toBottomOf="@+id/fl_leaderBoard"
+            app:layout_constraintStart_toStartOf="@+id/fl_leaderBoard"
+            app:layout_constraintTop_toTopOf="@+id/fl_leaderBoard" />
+
+        <TextView
+            android:id="@+id/tv_inFlleaderBoard"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="@string/flex_your_score_to_your_friends"
+            android:textColor="@color/darkBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/fl_leaderBoard"
+            app:layout_constraintEnd_toEndOf="@+id/fl_leaderBoard"
+            app:layout_constraintTop_toTopOf="@+id/fl_leaderBoard" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

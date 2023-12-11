@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Add a transparent margin on the right side (adjust margin value as needed) -->
+    <item
+        android:right="30dp"
+        android:drawable="@drawable/arrowstarted"/>
+</layer-list>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBlue"
+    tools:context=".View.intro.Register">
+    <ImageView
+        android:id="@+id/logoLogin"
+        android:layout_width="165dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logoregis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+    <TextView
+        android:id="@+id/greetLogin"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/member_sign_up"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etUserLogin"
+        android:layout_width="268dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_edittext_login"
+        android:backgroundTint="#6BFFFFFF"
+        android:textSize="16sp"
+        android:hint="@string/user"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/greetLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <EditText
+        android:id="@+id/etEmailLogin"
+        android:layout_width="268dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_edittext_login"
+        android:backgroundTint="#6BFFFFFF"
+        android:textSize="16sp"
+        android:hint="@string/email"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/etUserLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <EditText
+        android:id="@+id/etPassLogin"
+        android:layout_width="268dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_edittext_login"
+        android:backgroundTint="#6BFFFFFF"
+        android:textSize="16sp"
+        android:hint="@string/pass"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <EditText
+        android:id="@+id/etCfPassLogin"
+        android:layout_width="268dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_edittext_login"
+        android:backgroundTint="#6BFFFFFF"
+        android:textSize="16sp"
+        android:hint="@string/confirm_password"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/etPassLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="238.21dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/darkBlue"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/etCfPassLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAllCaps="false"
+        />
+
+    <TextView
+        android:id="@+id/tv_NotMember"
+        android:layout_width="130dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/already_a_member"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="152dp"
+        android:layout_height="28dp"
+        android:background="@drawable/radius_10"
+        android:backgroundTint="@color/darkBlue"
+        android:text="@string/btLogin"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_NotMember" />
+</androidx.constraintlayout.widget.ConstraintLayout>

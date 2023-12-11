@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "623557924441",
+    "project_id": "englishapp-37589",
+    "firebase_url": "https://englishapp-4d288-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "storage_bucket": "englishapp-37589.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623557924441:android:7ef1aca3321a9995900348",
+        "android_client_info": {
+          "package_name": "com.example.englishapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA513lr1rSeB5FckjeScRqrelv3PT_RxsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

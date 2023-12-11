@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".PracticeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/radius_20_bottom"
+        android:backgroundTint="@color/backgroundBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/icon_back_white" />
+
+        <TextView
+            android:id="@+id/tv_practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/practice"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_welcomePractice"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/welcome_please_pick_a_way_to_practice_yourself"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="end"/>
+
+        <ImageView
+            android:id="@+id/imv_logo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/small_logo_book"
+            android:layout_gravity="end"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_FlashCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/flashcard"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fl_containerFlashCard"
+        app:layout_constraintStart_toStartOf="@+id/fl_containerFlashCard" />
+
+    <FrameLayout
+        android:id="@+id/fl_containerFlashCard"
+        android:layout_width="350dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/radius_20"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" >
+
+        <ImageView
+            android:id="@+id/imv_logoFlashcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/img_practice_flascard"
+            />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/learn_new_words_from_sets_of_flashcard_that_have_a_various_range_of_topic"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_gravity="end"
+            />
+
+        <TextView
+            android:id="@+id/tv_processFlaschCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/_01_45"
+            android:textColor="@color/darkBlue"
+            android:layout_gravity="end|bottom"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_MultipleChoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/multiple_choices"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fl_containerMultipleChoices"
+        app:layout_constraintStart_toStartOf="@+id/fl_containerMultipleChoices" />
+
+    <FrameLayout
+        android:id="@+id/fl_containerMultipleChoices"
+        android:layout_width="350dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/radius_20"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_containerFlashCard" >
+
+        <ImageView
+            android:id="@+id/imv_logoMultipleChoices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/img_practice_multiplechoices"
+            />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/slogan_multiplechoices"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_gravity="end"
+            />
+
+        <TextView
+            android:id="@+id/tv_processMultipleChoices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/_01_45"
+            android:textColor="@color/darkBlue"
+            android:layout_gravity="end|bottom"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_ReverseTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/reverse_translate"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fl_containerReverseTranslate"
+        app:layout_constraintStart_toStartOf="@+id/fl_containerReverseTranslate" />
+
+    <FrameLayout
+        android:id="@+id/fl_containerReverseTranslate"
+        android:layout_width="350dp"
+        android:layout_height="115dp"
+        android:background="@drawable/radius_20"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_containerMultipleChoices">
+
+        <ImageView
+            android:id="@+id/imv_logoReverseTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_practice_reverse" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="start"
+            android:text="@string/slogan_practice_reverse"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_processReverseTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/_01_45"
+            android:textColor="@color/darkBlue"
+            android:layout_gravity="end|bottom"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

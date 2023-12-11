@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="140dp"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/iv_Avt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/avt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_greet"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/how_are_you_today"
+        app:layout_constraintStart_toEndOf="@id/iv_Avt"
+        app:layout_constraintTop_toTopOf="@id/iv_Avt" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Avt"
+        app:layout_constraintStart_toEndOf="@+id/iv_Avt" />
+
+    <ImageView
+        android:id="@+id/iv_bell"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_notifications_none_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Avt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_Avt" />
+
+    <TextView
+        android:id="@+id/containFind"
+        android:layout_width="363dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/grey_find"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bell"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_find"
+        android:layout_width="363dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="100dp"
+        android:hint="@string/title_find"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bell"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@id/et_find"
+        app:layout_constraintEnd_toEndOf="@+id/containFind" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
